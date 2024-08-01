@@ -39,7 +39,7 @@ pub struct AppIdentifiers {
 #[macro_export]
 macro_rules! make_current_app_identifiers {
     () => {
-        AppIdentifiers {
+        $crate::device::device_values::AppIdentifiers {
             app_name: env!("CARGO_PKG_NAME").to_string(),
             app_major: env!("CARGO_PKG_VERSION_MAJOR").parse().unwrap_or(0),
             app_minor: env!("CARGO_PKG_VERSION_MINOR").parse().unwrap_or(0),
